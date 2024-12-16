@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <title>The Gaming Archive</title>
+  <style>
+    /* Body Styling */
+    body {
+      background: radial-gradient(circle, #1a1a2e, #16213e); /* Gaming vibe background */
+      color: #ffffff; /* White text for readability */
+      font-family: 'Arial', sans-serif; /* Modern clean font */
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #0f3460; /* Dark blue for a gaming feel */
+    }
+    nav a {
+      color: #e94560; /* Neon red for links */
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      color: #a8ff78; /* Bright green on hover */
+      text-shadow: 0 0 5px #00f260, 0 0 10px #00f260; /* Neon glow */
+    }
+
+    /* Title Styling */
+    .gaming-title {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00f260, #0575e6); /* Gradient colors */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; /* Gradient text effect */
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Slight shadow for depth */
+    }
+
+    /* Slideshow Styling */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      overflow: hidden;
+    }
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      border: 5px solid #e94560; /* Neon border */
+      box-shadow: 0 0 10px #e94560, 0 0 20px #e94560; /* Glowing effect */
+    }
+    .slideshow img.active {
+      display: block;
+    }
+
+    /* Highlight Section Styling */
+    .highlights .highlight-img-container {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border: 5px solid #0f3460;
+      box-shadow: 0 0 10px #00f260, 0 0 20px #00f260; /* Neon glow for highlights */
+    }
+    .highlights .highlight-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .highlights p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #72CC50; /* Neon green text */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #16213e;
+      color: #e94560; /* Neon red text */
+    }
+    footer a {
+      color: #00f260;
+    }
+    footer a:hover {
+      text-shadow: 0 0 5px #00f260, 0 0 10px #00f260; /* Glow effect on hover */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#latest" class="w3-button w3-bar-item">Latest</a>
+  <a href="#about" class="w3-button w3-bar-item">About Us</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact Us</a>
+</nav>
+
+<!-- Title Below Navigation -->
+<section class="gaming-title">
+  The Gaming Archive
+</section>
+
+<!-- Slide Show -->
+<section class="slideshow">
+  <img class="active" src="Pew.png" alt="Gaming Pew">
+  <img src="Speed.png" alt="Gaming Speed">
+  <img src="Esports.png" alt="Esports Gaming">
+</section>
+
+<!-- Automatic Slideshow Script -->
+<script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var slides = document.querySelectorAll(".slideshow img");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+    myIndex++;
+    if (myIndex > slides.length) {
+      myIndex = 1;
+    }
+    slides[myIndex - 1].classList.add("active");
+    setTimeout(carousel, 3000);
+  }
+</script>
+
+<!-- Description Section -->
+<section class="w3-container w3-content w3-center" style="max-width:600px">
+  <p>
+    Welcome to The Gaming Archive, your ultimate portal to gaming news, trends, and culture. Explore the latest updates, watch your favorite creators, and celebrate the world of gaming.
+  </p>
+  <p>
+    In here, you can learn more about your favorite content creators, your favorite streamers, or your favorite esports team. Dive into exclusive insights, highlights, and updates that bring you closer to the gaming personalities and communities you love.
+  </p>
+</section>
+
+<!-- Highlights Section -->
+<section class="w3-row-padding w3-center w3-light-grey highlights">
+  <article class="w3-third">
+    <p>V-Tubers</p>
+    <div class="highlight-img-container">
+      <img src="ironmouse.png" alt="Ironmouse V-Tuber">
+    </div>
+  </article>
+  <article class="w3-third">
+    <p>Streamers</p>
+    <div class="highlight-img-container">
+      <img src="poki.png" alt="Streamers">
+    </div>
+  </article>
+  <article class="w3-third">
+    <p>Content Creators</p>
+    <div class="highlight-img-container">
+      <img src="kuya.png" alt="Content Creators">
+    </div>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p>Made by Mc John J. Pablo</p>
+  <p>Note: This website is for academic purposes only.</p>
+</footer>
+
+</body>
+</html>
